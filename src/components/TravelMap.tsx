@@ -35,11 +35,11 @@ export default function TravelMap({ target, points }: TravelMapProps) {
     <div className="live-map-shell">
       <MapContainer center={targetPosition} zoom={11} scrollWheelZoom className="live-map" preferCanvas>
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
+          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
         />
 
-        <CircleMarker center={targetPosition} radius={11} pathOptions={{ color: "#d32f2f", fillColor: "#d32f2f", fillOpacity: 0.95 }}>
+        <CircleMarker center={targetPosition} radius={11} pathOptions={{ color: "#e05544", fillColor: "#e05544", fillOpacity: 0.95 }}>
           <Tooltip permanent direction="top" offset={[0, -10]} className="map-tooltip target">
             T
           </Tooltip>
@@ -58,9 +58,9 @@ export default function TravelMap({ target, points }: TravelMapProps) {
             <Fragment key={point.id}>
               <Polyline
                 positions={[targetPosition, pointPosition]}
-                pathOptions={{ color: "#0f4aa6", weight: 3, opacity: 0.55 }}
+                pathOptions={{ color: "#f0f0f0", weight: 3, opacity: 0.55 }}
               />
-              <CircleMarker center={pointPosition} radius={9} pathOptions={{ color: "#0f4aa6", fillColor: "#0f4aa6", fillOpacity: 0.92 }}>
+              <CircleMarker center={pointPosition} radius={9} pathOptions={{ color: "#f0f0f0", fillColor: "#f0f0f0", fillOpacity: 0.92 }}>
                 <Tooltip permanent direction="top" offset={[0, -10]} className="map-tooltip">
                   {point.label}
                 </Tooltip>
