@@ -1,0 +1,413 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f5f7;
+  --panel: #ffffff;
+  --panel-subtle: #f9fafb;
+  --border: #dfe3e8;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #111827;
+  --primary-hover: #000000;
+  --danger: #b42318;
+  --success-soft: #e8f5ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--text);
+}
+
+body {
+  background: var(--bg);
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.page-shell {
+  width: min(1120px, calc(100% - 1.5rem));
+  margin: 1.2rem auto 2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.95rem;
+}
+
+.panel-main {
+  border-color: #cfd6de;
+}
+
+.panel-subtle {
+  background: var(--panel-subtle);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.35rem;
+}
+
+h2 {
+  font-size: 1.02rem;
+}
+
+.panel-subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.heading-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.badge-soft {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem 0.52rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: #ffffff;
+  white-space: nowrap;
+}
+
+.target-form,
+.landmark-add {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+label,
+summary {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+button {
+  border: 1px solid #cfd6de;
+  border-radius: 8px;
+  font: inherit;
+  padding: 0.52rem 0.62rem;
+}
+
+input,
+select {
+  background: #ffffff;
+}
+
+button {
+  background: var(--primary);
+  color: #ffffff;
+  cursor: pointer;
+  border-color: transparent;
+  transition: background-color 0.14s ease;
+}
+
+button:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+button.secondary {
+  background: #ffffff;
+  color: var(--text);
+  border-color: #ccd4de;
+}
+
+button.secondary:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.toolbar-row.muted-controls {
+  color: var(--muted);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.landmarks-details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.landmarks-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.landmarks-details summary::before {
+  content: "+";
+  margin-right: 0.45rem;
+}
+
+.landmarks-details[open] summary::before {
+  content: "−";
+}
+
+.landmarks-details[open] {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.45rem;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  vertical-align: top;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+th {
+  background: #f6f8fa;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+td input {
+  width: 100%;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.metric-cell {
+  white-space: nowrap;
+}
+
+.metric-cell.faster {
+  background: var(--success-soft);
+  font-weight: 600;
+}
+
+.row-error {
+  margin-top: 0.25rem;
+  color: var(--danger);
+  font-size: 0.78rem;
+}
+
+.error-banner {
+  margin-top: 0.62rem;
+  color: var(--danger);
+  background: #fff3f2;
+  border: 1px solid #f2cac7;
+  border-radius: 8px;
+  padding: 0.52rem;
+}
+
+.meta-row {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.loading-state {
+  margin-top: 0.58rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.live-map-shell {
+  margin-top: 0.52rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ecf1f8;
+}
+
+.live-map {
+  width: 100%;
+  height: 360px;
+}
+
+.map-tooltip {
+  border: 1px solid #d2d9e4;
+  border-radius: 999px;
+  background: #f9fbff;
+  color: #1f2937;
+  font-weight: 700;
+  padding: 0.1rem 0.4rem;
+}
+
+.map-tooltip.target {
+  background: #fff1ef;
+  border-color: #f2c2bc;
+}
+
+.leaflet-popup-content {
+  margin: 0.68rem 0.8rem;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.leaflet-popup-content strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.leaflet-popup-content div {
+  font-size: 0.84rem;
+}
+
+.leaflet-control-attribution {
+  font-size: 0.66rem;
+}
+
+.leaflet-container {
+  background: #d6e3f2;
+}
+
+.leaflet-control-container {
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.map-legend {
+  margin-top: 0.58rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.42rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfcfe;
+}
+
+.legend-row.legend-target {
+  background: #fff5f3;
+  border-color: #f2cbc8;
+}
+
+.legend-badge {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #0f4aa6;
+  color: #ffffff;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.legend-badge.target {
+  background: #d32f2f;
+}
+
+.legend-name {
+  font-weight: 600;
+}
+
+.legend-metrics {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
+.spinner {
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 999px;
+  border: 2px solid #c2cad6;
+  border-top-color: var(--primary);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 980px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    width: calc(100% - 1rem);
+    margin: 0.75rem auto 1.25rem;
+  }
+
+  .panel {
+    padding: 0.72rem;
+  }
+
+  .heading-row {
+    flex-direction: column;
+  }
+
+  .row-actions {
+    flex-direction: column;
+  }
+
+  .live-map {
+    height: 300px;
+  }
+
+  .legend-metrics {
+    margin-left: 0;
+    width: 100%;
+  }
+}

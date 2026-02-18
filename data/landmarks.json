@@ -1,0 +1,44 @@
+[
+  {
+    "id": "lm_palm_jumeirah",
+    "name": "Palm Jumeirah",
+    "maps_url": "https://maps.app.goo.gl/T9DrZWZ2JzZio49Q7",
+    "lat": 25.110869,
+    "lng": 55.145722
+  },
+  {
+    "id": "lm_jumeirah_islands",
+    "name": "Jumeirah Islands",
+    "maps_url": "https://maps.app.goo.gl/sebfBAMzmFAtMCzF6",
+    "lat": 25.0514111,
+    "lng": 55.1595159
+  },
+  {
+    "id": "lm_index_tower_difc",
+    "name": "Index tower DIFC",
+    "maps_url": "https://maps.app.goo.gl/cJwa4uQeT4PyzFFs7",
+    "lat": 25.2074025,
+    "lng": 55.2777425
+  },
+  {
+    "id": "lm_dubai_hills",
+    "name": "Dubai Hills",
+    "maps_url": "https://maps.app.goo.gl/xN92A4fzf6jBAXsy5",
+    "lat": 25.1084406,
+    "lng": 55.2469174
+  },
+  {
+    "id": "lm_jvc",
+    "name": "JVC",
+    "maps_url": "https://maps.app.goo.gl/hMCKw84mFc7oPnxBA",
+    "lat": 25.0539607,
+    "lng": 55.2071454
+  },
+  {
+    "id": "lm_creek_harbour",
+    "name": "Creek Harbour",
+    "maps_url": "https://maps.app.goo.gl/JvAzGpxim5YYWAaCA",
+    "lat": 25.2066955,
+    "lng": 55.3477911
+  }
+]
